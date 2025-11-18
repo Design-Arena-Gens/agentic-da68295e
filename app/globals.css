@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 13 13 17;
+  --card: 20 20 26;
+  --muted: 148 163 184;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: white;
+}
+
+.container-width {
+  @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.card {
+  background-color: rgb(var(--card));
+}
+
+.input {
+  @apply w-full rounded-md bg-black/30 border border-white/10 px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-md bg-brand-600 hover:bg-brand-700 px-4 py-2 font-semibold shadow-sm transition-colors disabled:opacity-60 disabled:cursor-not-allowed;
+}
+
+.label {
+  @apply block text-sm font-medium text-gray-300 mb-1;
+}
+
+.section {
+  @apply space-y-2 rounded-lg border border-white/10 p-4 card;
+}
+
+.codeblock {
+  @apply whitespace-pre-wrap break-words text-gray-100 text-sm leading-6;
+}
